@@ -1,0 +1,27 @@
+<html>
+    <head><h1>current date format</h1></head>
+    <body>
+        <script>
+            var current_date=new Date();
+            //d mean date m mean month y mean year
+            var d= current_date.getDate();
+            var m=current_date.getMonth();
+            var y=current_date.getFullYear();
+            if(d<10)
+            {
+                d="0"+d;
+            }if(m<10){
+                m="0"+m;
+            }
+            current_date=m+"-"+d+"-"+y;
+            document.write(current_date+"<br>");
+            current_date=m+"/"+d+"/"+y;
+            document.write(current_date+"<br>");
+            current_date=d+"-"+m+"-"+y;
+            document.write(current_date+"<br>");
+            current_date=d+"/"+m+"/"+y;
+            document.write(current_date+"<br>");
+
+        </script>
+    </body>
+</html>

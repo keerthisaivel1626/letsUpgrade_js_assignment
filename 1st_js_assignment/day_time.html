@@ -1,0 +1,50 @@
+<html><head><h1>display current day and time</h1></head>
+<body>
+    <script>
+        //current day
+        var current_day=new Date();
+        var  day=current_day.getDay();
+        //document.write(day);
+        var day_list=['sunday','monday','tuesday','wednesday','thursday','friday','saturday'];
+        document.write("Today is:"+day_list[day]+'<br>');
+        //current time with format
+        var hr=current_day.getHours();
+        var min=current_day.getMinutes();
+        var sec=current_day.getSeconds();
+//here hr>=12 is condition ->true=pm->false=am
+//here format mean am or pm 
+        var format =(hr>=12)?"PM":"AM";
+//more thn 12 its redused by 12 or else part->same ans
+        hr=(hr>=12)?hr-12:hr;
+
+        document.write("Current time is:"+hr+format+":"+min+":"+sec+".");
+    //midnight and afyetnoon
+   /* if(hr==0&&format=="PM")
+    {
+        if(min==0&&sec==0)
+        {
+            hr=12;
+            format="afternoon";
+        }
+        else{
+            hr=12;
+            format="AM";
+
+        }
+    }
+    if(hr==0&&format=="AM")
+    {
+        if(min==0&&sec==0)
+        {
+            hr=12;
+            format="midnight";
+        }
+        else{
+            hr=12;
+            format="AM";
+            
+        }
+    }
+    document.write("Current time is:"+hr+format+":"+min+":"+sec+".");*/
+    </script>
+</body></html>
