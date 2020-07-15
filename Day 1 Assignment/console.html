@@ -1,0 +1,77 @@
+
+<html>
+    <head><h1> Console function</h1></head>
+   <body>
+   <p>console is used for log a information with help of diffent function supported by console tool</p> 
+  <p>where we find?</p>
+  <p>u can find in chrome ->right click->inspect->console(ctrl+shift+j)</p>
+  <p id="demo"></p>
+    <script> 
+    console.info('console block');
+
+    console.log("This is %cMy first console message", "color: yellow; font-style: italic; background-color: blue;padding: 2px");
+    //var myObj = { firsname : "keerthana", lastname : "vadivel" };
+     // console.assert(document.getElementById("demo"), myObj);
+
+     //group and different log
+    console.log("This is the outer level");
+    console.group("First group");
+    console.log(1); 
+    console.log(true); 
+    console.group("Second group");
+    console.log(null); 
+    console.log(undefined);  
+    console.error("error");
+    console.warn("Still in the second group");
+    console.groupEnd();
+    console.log([1, 2, 3, 4]); // array inside log 
+    console.log({a:1, b:2, c:3}); // object inside log 
+    console.groupEnd();
+    //body  directory
+    console.dirxml(document.body);
+    
+   console.debug("Back to the outer level");
+   //time
+    console.time('function process'); 
+    let fun =  function(){ 
+    console.log('fun1 is running.. '); 
+    }
+    const car = {type:"bmw", model:"500", color:"white"};
+    // You can change a property:
+     car.color = "red";
+     // You can add a property:
+    car.owner = "keerthana"; 
+    document.getElementById("demo").innerHTML = "Car owner is " + car.owner; 
+    
+    //fun() 
+    console.dir(car);
+
+    let fun2 = function(){ 
+     console.log('fun2 is running..'); 
+    } 
+
+     console.log(fun()); // calling fun(); 
+     console.timeLog("function process");
+     alert("Do a bunch of other stuff...");
+     console.log(fun2()); // calling fun2(); 
+     console.timeEnd('function process'); 
+
+     console.table({'x':7, 'y':6}); 
+     for(let i=0;i<5;i++){ 
+
+     console.count(i); 
+      } 
+      
+    // console.clear() 
+    </script>
+     <p>
+        log() for displaying different value(like print)</p>
+            <p>error() default the error message will be highlighted with red color</p>
+            <p>warn() default the warning message will be highlighted with yellow color</p>
+            <p>clear() Console was cleared</p>
+            <p>time() and timeEnd() get time and process completed time(like start and stop)</p>
+            <p>table() showing in the table format</p>
+            <p>count() iteration count</p>
+            <p>group() and groupEnd() is separate block( time() and timeEnd())</p>
+    </body>
+</html>
