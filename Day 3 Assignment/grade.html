@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculating grade</title>
+    <p id="demo"></p>
+</head>
+<body>
+    <script>
+        function gradecalculate( mark) {
+  var grade;
+
+  if(90<=mark <=100) {
+    grade = "A+";
+  } else if(85<=mark <= 89) {
+    grade = "A";
+  } else if(80<=mark <= 84) {
+    grade = "A-";
+  }else if(75<=mark <= 79){
+
+  }else if (70<=mark >= 74) {
+    grade = "B+";
+  }else if(65<=mark <= 69) {
+    grade = "B";
+  }else if(60<=mark <= 64) {
+    grade = "C+";
+  }else if(55<=mark <= 59) {
+    grade = "C";
+  }else if(50<=mark <= 54) {
+    grade = "D+";
+  }else if(55<=mark <=59) {
+    grade = "D";
+  }else if(40<=mark <= 44) {
+    grade = "E";
+  }else if(0<=mark<=39) {
+    grade = "F";
+  }
+  document.getElementById("demo").innerHTML = "Marks are "+ mark + " and grade is " + grade;
+  console.log(`Marks are ${mark } and grade is  ${ grade}`);
+}
+         var mark=window.prompt("Enter mark");
+ 
+ gradecalculate(mark);
+    </script>
+</body>
+</html>

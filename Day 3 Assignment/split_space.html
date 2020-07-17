@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+    function myFunction(str) {
+    
+        var word1 = str.split(" ")[0];
+        var word2=str.split(" ")[1];
+
+        document.getElementById("demo").innerHTML ="the OS  name is "+ word1 + " and Version is" + word2;
+        console.log(`the OS  name is ${word1} and Version is ${word2} `);
+      }
+      var OS=window.prompt("Enter os name and version");
+ 
+myFunction(OS);
+    </script>
+</body>
+</html>

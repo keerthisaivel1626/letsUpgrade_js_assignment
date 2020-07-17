@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <h1>finding odd number</h1>
+    <p id="result"></p>
+    <script>
+           function oddOrEven(x) {
+             return ( x & 1 ) ? "odd" : "even";
+              }
+
+function checkNumber(argNumber) {
+  document.getElementById("result").innerHTML = " the Number entered is" + argNumber + " and Number is " + oddOrEven(argNumber);
+  console.log(`the Number entered is ${argNumber} and Number is`+oddOrEven(argNumber));
+}
+var number=window.prompt("Enter number");
+ 
+checkNumber(number);
+    </script>
+</head>
+<body>
+    <p id="=demo"></p>
+</body>
+</html>
