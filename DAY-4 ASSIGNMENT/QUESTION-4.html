@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CALCULATOR IN JAVASCRIPT</title>
+    <h1>CALCULATOR</h1>
+</head>
+<body>  
+    <form name="calculator">  
+        Number 1: <input type="text" name="number1">   <br>
+        Number 2: <input type="text" name="number2">   <br>
+        Get Result: <input type="text" name="total">   <br>
+        
+        <input type="button" value="ADDITION" onclick="addition();">
+        <input type="button" value="SUBTRACTION" onclick="subtraction();"><br>
+        <input type="button" value="MULTIPLICATION" onclick="multiply();">
+        <input type="button" value="DIVISION" onclick="division();"><br>
+        <input type="button" value="PERCENTAGE" onclick="percentage()">
+        <input type="button" value="SQUARE ROOT" onclick="squareroot();">
+    </form>  
+        
+    <script>
+        function addition(){  
+            a=Number(document.calculator.number1.value);  
+            b=Number(document.calculator.number2.value);
+            c=a+b;  
+            document.calculator.total.value=c;
+            }  
+              
+        function subtraction(){  
+            a=Number(document.calculator.number1.value);  
+            b=Number(document.calculator.number2.value);  
+            c=a-b;  
+            document.calculator.total.value=c;  
+            }
+        
+        function multiply(){  
+            a=Number(document.calculator.number1.value);  
+            b=Number(document.calculator.number2.value);  
+            c=a*b;  
+            document.calculator.total.value=c;  
+            }  
+            
+        function division(){  
+            a=Number(document.calculator.number1.value);  
+            b=Number(document.calculator.number2.value);  
+            c=a/b;  
+            document.calculator.total.value=c;  
+            }
+               
+        function percentage(){  
+            a=Number(document.calculator.number1.value);  
+            b=Number(document.calculator.number2.value);  
+            c=(a/100)*b;  
+            document.calculator.total.value=c;  
+            }
+        
+        function squareroot(){  
+            a=Number(document.calculator.number1.value);  
+            b=Number(document.calculator.number2.value=2);  
+            c=a**b;  
+            document.calculator.total.value=c;
+            }
+    </script>     
+</body>
+</html>

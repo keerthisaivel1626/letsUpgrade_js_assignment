@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PRIME NUMBERS</title>
+</head>
+<body>
+    <script>
+        
+        let n = prompt('Enter a number');
+        console.log('these are the numbers between 1 and', n);
+        outer: for (let i = 2; i < n; i++) 
+        {
+            inner: for (let j = 1; j < n; j++) 
+            {
+                while (j>1 && j<i) 
+                {
+                    if (i%j == 0 ) 
+                    {
+                        continue outer;
+                    } 
+                    else 
+                    {
+                    continue inner;
+                    }
+                }
+            }
+            [console.log(i)];
+        }
+    </script>
+</body>
+</html>

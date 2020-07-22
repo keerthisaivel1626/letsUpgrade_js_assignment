@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SALES DEPARTMENT</title>
+    <h1>REWARD FOR EMPLOYEES</h1>
+</head>
+<body>
+    <script>
+        var sales = Number(prompt("Enter the number of sales made by you this year"));
+
+        if (sales >= 0 && sales <= 5000)
+        {
+            var total_commision = sales * 0.02;
+            console.log(`total commision earned by you is ${total_commision}`) 
+        }
+
+        else if (sales >= 5001 && sales <= 10000)
+        {
+            var total_commision = (5000 * 0.02) + ((sales-5000)*0.05 ) ;
+            console.log(`total commision earned by you is ${total_commision}`) 
+        }
+
+        else if (sales >= 10001 && sales < 20000)
+        {
+            var total_commision = ( 5000 * 0.02 ) + ( 5000 *  0.05 ) + ((sales-10000)*0.07 ) ;
+            console.log(`total commision earned by you is ${total_commision}`); 
+        }
+        
+        else (sales >= 20001) 
+        {
+            var total_commision = ( 5000 * 0.02 ) + ( 5000 * 0.05 ) + ( 10000 * 0.07 ) + (( sales-20000) * 0.1 );
+            console.log(`total commision earned by you is ${total_commision}`);
+        }      
+   </script>
+</body>
+</html>
